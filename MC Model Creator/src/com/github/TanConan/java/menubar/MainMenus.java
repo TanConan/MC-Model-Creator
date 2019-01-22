@@ -8,19 +8,28 @@ import javafx.scene.control.MenuItem;
 
 public class MainMenus {
 	
-	public static void addMainMenus(MenuBar menuBar) {
+	static void addMainMenus(MenuBar menuBar) {
 		
+		// Create Array-list for all menus
 		ArrayList<Menu> mainMenus = new ArrayList<>();
 		
 		// Create and add menu "File" to Array-list
 		Menu menuFile = new Menu("File");
+		MenuItemsFile.addMenuItemsFile(menuFile);
 		mainMenus.add(menuFile);
 		
-		// Create and add menu items to menu "File"
-		MenuItemsFile mif = new MenuItemsFile();
-		for (MenuItem menuItem : mif.menuItemsFile) {
+		/*
+		 * Add new Menus here, like:
+		 * 
+		 * Menu menuFile = new Menu("File");
+		 * menuFile.addMenuItemsFile();
+		 * mainMenus.add(menuFile);
+		 */
+		
+		// Add Menus to Menu-bar
+		for (Menu menus : mainMenus) {
 			
-			menuFile.getItems().add(menuItem);
+			menuBar.getMenus().add(menus);
 		}	
 	}
 }
