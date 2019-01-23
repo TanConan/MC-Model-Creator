@@ -1,4 +1,4 @@
-package com.github.TanConan.java.menubar;
+package com.github.TanConan.menubar;
 
 import java.util.ArrayList;
 

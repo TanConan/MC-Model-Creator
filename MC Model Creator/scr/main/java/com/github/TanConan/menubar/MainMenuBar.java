@@ -1,4 +1,4 @@
-package com.github.TanConan.java.menubar;
+package com.github.TanConan.menubar;
 
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.BorderPane;

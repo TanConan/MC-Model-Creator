@@ -1,10 +1,9 @@
-package com.github.TanConan.java;
+package com.github.TanConan;
 
-import java.io.File;
 import java.net.MalformedURLException;
 
-import com.github.TanConan.java.menubar.MainMenuBar;
-import com.github.TanConan.java.util.Constants;
+import com.github.TanConan.menubar.MainMenuBar;
+import com.github.TanConan.util.Constants;
 
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -13,7 +12,7 @@ import javafx.stage.Stage;
 
 public class MainScene {
 	
-	public void start(Stage primaryStage) throws MalformedURLException {
+	public static void start(Stage primaryStage) throws MalformedURLException {
 		
 		// Create layout
 		BorderPane layout = new BorderPane();
@@ -22,15 +21,14 @@ public class MainScene {
 		MainMenuBar.addMainMenuBar(layout);
 		
 		// Create scene
-		Scene scene = new Scene(layout);
+		Scene scene = new Scene(layout, 1600, 900);
 		
 		// Set Stage-name
-		primaryStage.setTitle(Constants.NAME + " " + Constants.VERSION);
+		primaryStage.setTitle(Constants.MC_NAME + " " + Constants.MC_VERSION);
 		
 		// Set Stage-icon
-		Image image = new Image(new File("/MC Model Creator/src/com/github/TanConan/resources/icons/icon64x64.png").toURI().toURL().toString());
+		Image image = new Image(Constants.RESPATH_ICONS + "icon.png");
 		primaryStage.getIcons().add(image);
-		//TODO Icon
 		
 		// Add scene to stage and show stage
 		primaryStage.setScene(scene);
