@@ -84,11 +84,11 @@ public class MenuItemsFile {
 	
 	private static void menuItemImportEvent() {
 		// TODO Auto-generated method stub
-		System.out.println("Save As...");
+		System.out.println("Import...");
 	}
 	
 	private static void menuItemExportEvent() {
 		// TODO Auto-generated method stub
-		System.out.println("Save As...");
+		System.out.println("Export...");
 	}
 }

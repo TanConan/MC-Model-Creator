@@ -5,17 +5,17 @@ import java.util.ArrayList;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 
-public class MainMenus {
+public class Menus {
 	
 	static void addMainMenus(MenuBar menuBar) {
 		
 		// Create Array-list for all menus
-		ArrayList<Menu> mainMenus = new ArrayList<>();
+		ArrayList<Menu> menus = new ArrayList<>();
 		
 		// Create and add menu "File" to Array-list
 		Menu menuFile = new Menu("File");
 		MenuItemsFile.addMenuItemsFile(menuFile);
-		mainMenus.add(menuFile);
+		menus.add(menuFile);
 		
 		/*
 		 * Add new Menus here, like:
@@ -26,9 +26,9 @@ public class MainMenus {
 		 */
 		
 		// Add Menus to Menu-bar
-		for (Menu menus : mainMenus) {
+		for (Menu menu : menus) {
 			
-			menuBar.getMenus().add(menus);
+			menuBar.getMenus().add(menu);
 		}	
 	}
 }

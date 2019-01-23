@@ -11,7 +11,7 @@ public class MainMenuBar {
 		MenuBar menuBar = new MenuBar();
 
 		// Create and add menus to menu bar
-		MainMenus.addMainMenus(menuBar);
+		Menus.addMainMenus(menuBar);
 
 		// Set Menu-bar to Top of Border-pane
 		layout.setTop(menuBar);
