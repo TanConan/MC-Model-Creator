@@ -2,11 +2,11 @@ package com.github.TanConan;
 
 import java.net.MalformedURLException;
 
+import com.github.TanConan.icons.Icons;
 import com.github.TanConan.menubar.MainMenuBar;
 import com.github.TanConan.util.Constants;
 
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -17,7 +17,7 @@ public class MainScene {
 		// Create layout
 		BorderPane layout = new BorderPane();
 		
-		// Create and add MainMenubar to Top of layout
+		// Add MainMenubar
 		MainMenuBar.addMainMenuBar(layout);
 		
 		// Create scene
@@ -27,8 +27,7 @@ public class MainScene {
 		primaryStage.setTitle(Constants.MC_NAME + " " + Constants.MC_VERSION);
 		
 		// Set Stage-icon
-		Image image = new Image(Constants.RESPATH_ICONS + "icon.png");
-		primaryStage.getIcons().add(image);
+		primaryStage.getIcons().add(Icons.MAIN);
 		
 		// Add scene to stage and show stage
 		primaryStage.setScene(scene);
