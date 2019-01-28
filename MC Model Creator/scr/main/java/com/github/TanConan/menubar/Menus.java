@@ -7,15 +7,20 @@ import javafx.scene.control.MenuBar;
 
 public class Menus {
 	
-	static void addMainMenus(MenuBar menuBar) {
+	static void addMenus(MenuBar menuBar) {
 		
 		// Create Array-list for all menus
 		ArrayList<Menu> menus = new ArrayList<>();
 		
 		// Create and add menu "File" to Array-list
 		Menu menuFile = new Menu("File");
-		MenuItemsFile.addMenuItemsFile(menuFile);
+		MenuItemsFile.addMenuItems(menuFile);
 		menus.add(menuFile);
+		
+		// Create and add menu "Options" to Array-list
+		Menu menuOptions = new Menu("Options");
+		MenuItemsOptions.addMenuItems(menuOptions);
+		menus.add(menuOptions);
 		
 		/*
 		 * Add new Menus here, like:

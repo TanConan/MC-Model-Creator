@@ -10,7 +10,7 @@ import javafx.scene.control.SeparatorMenuItem;
 
 public class MenuItemsFile {
 
-	static void addMenuItemsFile(Menu menu) {
+	static void addMenuItems(Menu menu) {
 
 		// Create Array-list for Menu-items
 		ArrayList<MenuItem> menuItemsFile = new ArrayList<>();
@@ -18,50 +18,50 @@ public class MenuItemsFile {
 		double iconSize = 26;
 
 		// Create Menu-item "New", add Event, add Icon and add to List
-		MenuItem menuItemNew = new MenuItem("New");
-		menuItemNew.setOnAction(event -> {
-			menuItemNewEvent();
+		MenuItem miNew = new MenuItem("New");
+		miNew.setOnAction(event -> {
+			newEvent();
 		});
-		menuItemNew.setGraphic(IconsMenuFile.getNew(iconSize));
-		menuItemsFile.add(menuItemNew);
+		miNew.setGraphic(IconsMenuFile.getNew(iconSize));
+		menuItemsFile.add(miNew);
 		
 		// Add Separator
 		menuItemsFile.add(new SeparatorMenuItem());
 
 		// Create Menu-item "Save", add Event, add Icon and add to List
-		MenuItem menuItemSave = new MenuItem("Save");
-		menuItemSave.setOnAction(event -> {
-			menuItemSaveEvent();
+		MenuItem miSave = new MenuItem("Save");
+		miSave.setOnAction(event -> {
+			saveEvent();
 		});
-		menuItemSave.setGraphic(IconsMenuFile.getSave(iconSize));
-		menuItemsFile.add(menuItemSave);
+		miSave.setGraphic(IconsMenuFile.getSave(iconSize));
+		menuItemsFile.add(miSave);
 
 		// Create Menu-item "Save As...", add Event, add Icon and add to List
-		MenuItem menuItemSaveAs = new MenuItem("Save As...");
-		menuItemSaveAs.setOnAction(event -> {
-			menuItemSaveAsEvent();
+		MenuItem miSaveAs = new MenuItem("Save As...");
+		miSaveAs.setOnAction(event -> {
+			saveAsEvent();
 		});
-		menuItemSaveAs.setGraphic(IconsMenuFile.getSaveAs(iconSize));
-		menuItemsFile.add(menuItemSaveAs);
+		miSaveAs.setGraphic(IconsMenuFile.getSaveAs(iconSize));
+		menuItemsFile.add(miSaveAs);
 		
 		// Add Separator
 		menuItemsFile.add(new SeparatorMenuItem());
 		
 		// Create Menu-item "Import", add Event, add Icon and add to List
-		MenuItem menuItemImport = new MenuItem("Import...");
-		menuItemImport.setOnAction(event -> {
-			menuItemImportEvent();
+		MenuItem miImport = new MenuItem("Import...");
+		miImport.setOnAction(event -> {
+			importEvent();
 		});
-		menuItemImport.setGraphic(IconsMenuFile.getImport(iconSize));
-		menuItemsFile.add(menuItemImport);
+		miImport.setGraphic(IconsMenuFile.getImport(iconSize));
+		menuItemsFile.add(miImport);
 		
 		// Create Menu-item "Export", add Event, add Icon and add to List
-		MenuItem menuItemExport = new MenuItem("Export...");
-		menuItemExport.setOnAction(event -> {
-			menuItemExportEvent();
+		MenuItem miExport = new MenuItem("Export...");
+		miExport.setOnAction(event -> {
+			exportEvent();
 		});
-		menuItemExport.setGraphic(IconsMenuFile.getExport(iconSize));
-		menuItemsFile.add(menuItemExport);
+		miExport.setGraphic(IconsMenuFile.getExport(iconSize));
+		menuItemsFile.add(miExport);
 		
 		/*
 		 * Add new "File" menu Items here
@@ -76,27 +76,27 @@ public class MenuItemsFile {
 		}
 	}
 
-	private static void menuItemNewEvent() {
+	private static void newEvent() {
 		// TODO Auto-generated method stub
 		System.out.println("New");
 	}
 
-	private static void menuItemSaveEvent() {
+	private static void saveEvent() {
 		// TODO Auto-generated method stub
 		System.out.println("Save");
 	}
 
-	private static void menuItemSaveAsEvent() {
+	private static void saveAsEvent() {
 		// TODO Auto-generated method stub
 		System.out.println("Save As...");
 	}
 	
-	private static void menuItemImportEvent() {
+	private static void importEvent() {
 		// TODO Auto-generated method stub
 		System.out.println("Import...");
 	}
 	
-	private static void menuItemExportEvent() {
+	private static void exportEvent() {
 		// TODO Auto-generated method stub
 		System.out.println("Export...");
 	}
