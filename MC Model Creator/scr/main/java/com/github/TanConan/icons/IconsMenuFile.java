@@ -1,47 +1,52 @@
 package com.github.TanConan.icons;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class IconsMenuFile {
 	
-	public static ImageView getNew(double size) {
+	public ImageView getNew(double size) {
 		
-		ImageView IconFileNew = new ImageView(Icons.FILE_NEW);
-		IconFileNew.setFitHeight(size);
-		IconFileNew.setFitWidth(size);
-		return IconFileNew;
+		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/file/Icon_File_New.png"));
+		ImageView iconView = new ImageView(icon);
+		iconView.setFitHeight(size);
+		iconView.setFitWidth(size);
+		return iconView;
 	}
 	
-	public static ImageView getSave(double size) {
+	public ImageView getSave(double size) {
 		
-		ImageView IconFileNew = new ImageView(Icons.FILE_SAVE);
-		IconFileNew.setFitHeight(size);
-		IconFileNew.setFitWidth(size);
-		return IconFileNew;
+		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/file/Icon_File_Save.png"));
+		ImageView iconView = new ImageView(icon);
+		iconView.setFitHeight(size);
+		iconView.setFitWidth(size);
+		return iconView;
 	}
 	
-	public static ImageView getSaveAs(double size) {
+	public ImageView getSaveAs(double size) {
 		
-		ImageView IconFileNew = new ImageView(Icons.FILE_SAVEAS);
-		IconFileNew.setFitHeight(size);
-		IconFileNew.setFitWidth(size);
-		return IconFileNew;
+		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/file/Icon_File_SaveAs.png"));
+		ImageView iconView = new ImageView(icon);
+		iconView.setFitHeight(size);
+		iconView.setFitWidth(size);
+		return iconView;
 	}
 	
-	public static ImageView getImport(double size) {
+	public ImageView getImport(double size) {
 		
-		ImageView IconFileNew = new ImageView(Icons.FILE_IMPORT);
-		IconFileNew.setFitHeight(size);
-		IconFileNew.setFitWidth(size);
-		return IconFileNew;
+		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/file/Icon_File_Import.png"));
+		ImageView iconView = new ImageView(icon);
+		iconView.setFitHeight(size);
+		iconView.setFitWidth(size);
+		return iconView;
 	}
 	
-	public static ImageView getExport(double size) {
+	public ImageView getExport(double size) {
 		
-		ImageView IconFileNew = new ImageView(Icons.FILE_EXPORT);
-		IconFileNew.setFitHeight(size);
-		IconFileNew.setFitWidth(size);
-		return IconFileNew;
+		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/file/Icon_File_Export.png"));
+		ImageView iconView = new ImageView(icon);
+		iconView.setFitHeight(size);
+		iconView.setFitWidth(size);
+		return iconView;
 	}
-
 }

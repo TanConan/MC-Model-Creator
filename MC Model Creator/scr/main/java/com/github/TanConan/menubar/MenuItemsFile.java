@@ -15,6 +15,8 @@ public class MenuItemsFile {
 		// Create Array-list for Menu-items
 		ArrayList<MenuItem> menuItemsFile = new ArrayList<>();
 		
+		IconsMenuFile icon = new IconsMenuFile();
+		
 		double iconSize = 26;
 
 		// Create Menu-item "New", add Event, add Icon and add to List
@@ -22,7 +24,7 @@ public class MenuItemsFile {
 		miNew.setOnAction(event -> {
 			newEvent();
 		});
-		miNew.setGraphic(IconsMenuFile.getNew(iconSize));
+		miNew.setGraphic(icon.getNew(iconSize));
 		menuItemsFile.add(miNew);
 		
 		// Add Separator
@@ -33,7 +35,7 @@ public class MenuItemsFile {
 		miSave.setOnAction(event -> {
 			saveEvent();
 		});
-		miSave.setGraphic(IconsMenuFile.getSave(iconSize));
+		miSave.setGraphic(icon.getSave(iconSize));
 		menuItemsFile.add(miSave);
 
 		// Create Menu-item "Save As...", add Event, add Icon and add to List
@@ -41,7 +43,7 @@ public class MenuItemsFile {
 		miSaveAs.setOnAction(event -> {
 			saveAsEvent();
 		});
-		miSaveAs.setGraphic(IconsMenuFile.getSaveAs(iconSize));
+		miSaveAs.setGraphic(icon.getSaveAs(iconSize));
 		menuItemsFile.add(miSaveAs);
 		
 		// Add Separator
@@ -52,7 +54,7 @@ public class MenuItemsFile {
 		miImport.setOnAction(event -> {
 			importEvent();
 		});
-		miImport.setGraphic(IconsMenuFile.getImport(iconSize));
+		miImport.setGraphic(icon.getImport(iconSize));
 		menuItemsFile.add(miImport);
 		
 		// Create Menu-item "Export", add Event, add Icon and add to List
@@ -60,7 +62,7 @@ public class MenuItemsFile {
 		miExport.setOnAction(event -> {
 			exportEvent();
 		});
-		miExport.setGraphic(IconsMenuFile.getExport(iconSize));
+		miExport.setGraphic(icon.getExport(iconSize));
 		menuItemsFile.add(miExport);
 		
 		/*

@@ -1,6 +1,6 @@
 package com.github.TanConan;
 
-import com.github.TanConan.icons.Icons;
+import com.github.TanConan.icons.IconMainApp;
 import com.github.TanConan.menubar.MainMenuBar;
 import com.github.TanConan.modelspace.Block;
 import com.github.TanConan.modelspace.ModelPane;
@@ -31,7 +31,7 @@ public class MainScene {
 		MainApp.getStage().setTitle(Constants.MC_NAME + " " + Constants.MC_VERSION);
 		
 		// Set Stage-icon
-		MainApp.getStage().getIcons().add(Icons.MAIN);
+		MainApp.getStage().getIcons().add(new IconMainApp().getNew());
 		
 		// Add scene to stage and show stage
 		MainApp.getStage().setScene(scene);
