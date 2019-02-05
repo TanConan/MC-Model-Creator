@@ -2,6 +2,8 @@ package com.github.TanConan;
 
 import com.github.TanConan.icons.Icons;
 import com.github.TanConan.menubar.MainMenuBar;
+import com.github.TanConan.modelspace.Block;
+import com.github.TanConan.modelspace.ModelPane;
 import com.github.TanConan.util.Constants;
 
 import javafx.scene.Scene;
@@ -14,11 +16,16 @@ public class MainScene {
 		// Create layout
 		BorderPane layout = new BorderPane();
 		
-		// Add MainMenubar
+		// Add main Menu-bar
 		MainMenuBar.addMenuBar(layout);
 		
-		// Create scene
-		Scene scene = new Scene(layout, 1600, 900);
+		// Add Model-pane
+		ModelPane.addModelPane(layout);
+		
+		Block.addBlock(0, 0, 0, 50, 50, 50, "test");
+		
+		// Create Scene
+		Scene scene = new Scene(layout);
 		
 		// Set Stage-name
 		MainApp.getStage().setTitle(Constants.MC_NAME + " " + Constants.MC_VERSION);
