@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 
 public class IconMainApp {
 	
-	public Image getNew() {
+	public Image getMainAppIcon() {
 		
 		Image icon = new Image(getClass().getClassLoader().getResourceAsStream("icons/main/Icon.png"));
 

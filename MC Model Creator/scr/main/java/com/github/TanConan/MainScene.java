@@ -31,7 +31,7 @@ public class MainScene {
 		MainApp.getStage().setTitle(Constants.MC_NAME + " " + Constants.MC_VERSION);
 		
 		// Set Stage-icon
-		MainApp.getStage().getIcons().add(new IconMainApp().getNew());
+		MainApp.getStage().getIcons().add(new IconMainApp().getMainAppIcon());
 		
 		// Add scene to stage and show stage
 		MainApp.getStage().setScene(scene);
