@@ -6,8 +6,10 @@ import com.github.TanConan.modelspace.Block;
 import com.github.TanConan.modelspace.ModelPane;
 import com.github.TanConan.util.Constants;
 
+import javafx.geometry.Point3D;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 
 public class MainScene {
 	
@@ -22,7 +24,8 @@ public class MainScene {
 		// Add Model-pane
 		ModelPane.addModelPane(layout);
 		
-		Block.addBlock(0, 0, 0, 50, 50, 50, "test");
+		Block.addBlock(0, 0, 0, 50, 50, 50, new Point3D(0, 0, 0), "test", Color.RED);
+		Block.addBlock(0, 0, 0, 50, 50, 50, new Point3D(25, 0, 0), "test2", Color.BLUE);
 		
 		// Create Scene
 		Scene scene = new Scene(layout);

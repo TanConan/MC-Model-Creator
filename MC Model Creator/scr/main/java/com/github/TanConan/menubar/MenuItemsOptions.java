@@ -3,10 +3,13 @@ package com.github.TanConan.menubar;
 import java.util.ArrayList;
 
 import com.github.TanConan.MainApp;
+import com.github.TanConan.modelspace.Block;
 
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.shape.Box;
+import javafx.scene.shape.DrawMode;
 
 public class MenuItemsOptions {
 	
@@ -21,6 +24,13 @@ public class MenuItemsOptions {
 			alwaysOnTopEvent(alwaysOnTop);
 		});
 		menuItemsOptions.add(alwaysOnTop);
+		
+		// Create Menu-item "Wireframe", add Event and add to List
+		CheckMenuItem wireframe = new CheckMenuItem("Wireframe");
+		wireframe.setOnAction(event -> {
+			wireframeEvent(wireframe);
+		});
+		menuItemsOptions.add(wireframe);
 		
 		/* 
 		 * Add new Options Menu-Items here
@@ -37,6 +47,17 @@ public class MenuItemsOptions {
 
 	private static void alwaysOnTopEvent(CheckMenuItem alwaysOnTop) {
 		
-		MainApp.getStage().setAlwaysOnTop(alwaysOnTop.selectedProperty().getValue());;
+		MainApp.getStage().setAlwaysOnTop(alwaysOnTop.isSelected());
+	}
+	
+	private static void wireframeEvent(CheckMenuItem wireframe) {
+		
+		for (Box box : Block.getBlocks()) {
+			if (wireframe.isSelected())
+			box.setDrawMode(DrawMode.LINE);
+			else {
+			box.setDrawMode(DrawMode.FILL);
+			}
+		}
 	}
 }
