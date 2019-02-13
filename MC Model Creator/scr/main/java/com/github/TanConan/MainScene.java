@@ -2,7 +2,9 @@ package com.github.TanConan;
 
 import com.github.TanConan.icons.IconMainApp;
 import com.github.TanConan.menubar.MainMenuBar;
+import com.github.TanConan.modeledit.EditPane;
 import com.github.TanConan.modelspace.Block;
+import com.github.TanConan.modelspace.Camera;
 import com.github.TanConan.modelspace.ModelPane;
 import com.github.TanConan.util.Constants;
 
@@ -15,6 +17,9 @@ public class MainScene {
 	
 	public static void start() {
 		
+		MainApp.getStage().setMinWidth(800);
+		MainApp.getStage().setMinHeight(450);
+		
 		// Create layout
 		BorderPane layout = new BorderPane();
 		
@@ -22,10 +27,14 @@ public class MainScene {
 		MainMenuBar.addMenuBar(layout);
 		
 		// Add Model-pane
-		ModelPane.addModelPane(layout);
+		ModelPane.addModelPane(layout, 1400, 900);
 		
-		Block.addBlock(0, 0, 0, 50, 50, 50, new Point3D(0, 0, 0), "test", Color.RED);
-		Block.addBlock(0, 0, 0, 50, 50, 50, new Point3D(25, 0, 0), "test2", Color.BLUE);
+		// Add Edit-pane
+		EditPane.addEditPane(layout, 200);
+		
+		Block.addBlock(0, 0, 0, 16, 16, 16, new Point3D(0, 0, 0), "test", Color.RED);
+		Block.addBlock(0, 0, 0, 16, 16, 16, new Point3D(8, 0, 0), "test2", Color.BLUE);
+		Camera.getCamera().setTranslateZ(-100);
 		
 		// Create Scene
 		Scene scene = new Scene(layout);

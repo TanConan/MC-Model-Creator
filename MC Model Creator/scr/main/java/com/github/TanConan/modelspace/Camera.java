@@ -2,11 +2,11 @@ package com.github.TanConan.modelspace;
 
 import javafx.scene.PerspectiveCamera;
 
-public class Camera { 
+public class Camera {
+	
+	static PerspectiveCamera camera = new PerspectiveCamera(true);
 	
 	static void addCamera() {
-		
-		PerspectiveCamera camera = new PerspectiveCamera(true);
 		
 		camera.setNearClip(0.1);
 		camera.setFarClip(10000.0);
@@ -17,5 +17,10 @@ public class Camera {
 		
 		ModelPane.getRoot().getChildren().add(camera);
 		ModelPane.getSubScene().setCamera(camera);
+	}
+	
+	public static PerspectiveCamera getCamera() {
+		
+		return camera;
 	}
 }
