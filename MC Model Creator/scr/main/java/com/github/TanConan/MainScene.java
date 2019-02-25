@@ -30,7 +30,7 @@ public class MainScene {
 		ModelPane.addModelPane(layout, 1400, 900);
 		
 		// Add Edit-pane
-		EditPane.addEditPane(layout, 200);
+		EditPane.addEditPane(layout, 200, 300);
 		
 		Block.addBlock(0, 0, 0, 16, 16, 16, new Point3D(0, 0, 0), "test", Color.RED);
 		Block.addBlock(0, 0, 0, 16, 16, 16, new Point3D(8, 0, 0), "test2", Color.BLUE);
